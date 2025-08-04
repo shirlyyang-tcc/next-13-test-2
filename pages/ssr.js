@@ -71,7 +71,7 @@ export async function getServerSideProps(context) {
   const requestTime = new Date().toISOString()
 
   // 模拟 API 调用延迟
-  await new Promise(resolve => setTimeout(resolve, 500))
+  // await new Promise(resolve => setTimeout(resolve, 500))
 
   return {
     props: {
