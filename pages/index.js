@@ -45,6 +45,11 @@ export default function Home() {
             <h2>API 函数测试 &rarr;</h2>
             <p>测试 Next.js API 路由功能</p>
           </Link>
+
+          <Link href="/methods-test" className={styles.card}>
+            <h2>HTTP 方法测试 &rarr;</h2>
+            <p>测试 /hello/methods 的所有 HTTP 方法</p>
+          </Link>
         </div>
 
         <div className={styles.info}>
@@ -55,6 +60,7 @@ export default function Home() {
             <li><strong>SSR</strong>: 服务端渲染，适合需要 SEO 的页面</li>
             <li><strong>ISR</strong>: 静态生成 + 定时更新，平衡性能和新鲜度</li>
             <li><strong>API 函数</strong>: 服务器端 API 路由，可以处理数据请求</li>
+            <li><strong>HTTP 方法测试</strong>: 测试所有 HTTP 方法（GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS）</li>
           </ul>
         </div>
       </main>
