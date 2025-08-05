@@ -3,6 +3,6 @@ export const onRequest = (context) => {
   const { params, server, clientIp, geo } = context;
   return new Response(
     "Context from node-functions!" +
-      JSON.stringify({ params, server, clientIp, geo })
+      JSON.stringify({ params, server, clientIp, geo, headers: context.request.headers })
   );
 };
