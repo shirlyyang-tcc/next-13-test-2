@@ -31,7 +31,12 @@ router.post('/users', async (ctx) => {
   ctx.status = 201;
 });
 
-// router.get('/static/(.*)', async (ctx) => {
+router.get('/req-headers', async (ctx) => {
+  ctx.body = ctx.request.headers;
+  ctx.status = 200;
+});
+
+// router.get('/static/*', async (ctx) => {
 //   const relPath = ctx.params[0] || '';
 //   const filePath = path.join(__dirname, 'public', relPath);
 //   try {
