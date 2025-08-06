@@ -31,21 +31,21 @@ router.post('/users', async (ctx) => {
   ctx.status = 201;
 });
 
-router.get('/static/(.*)', async (ctx) => {
-  const relPath = ctx.params[0] || '';
-  const filePath = path.join(__dirname, 'public', relPath);
-  try {
-    // 检查文件是否存在
-    await fs.promises.access(filePath, fs.constants.R_OK);
-    // 自动设置 Content-Type
-    const ext = path.extname(filePath);
-    ctx.type = mime.lookup(ext) || 'application/octet-stream';
-    ctx.body = fs.createReadStream(filePath);
-  } catch {
-    ctx.status = 404;
-    ctx.body = 'Not Found';
-  }
-});
+// router.get('/static/(.*)', async (ctx) => {
+//   const relPath = ctx.params[0] || '';
+//   const filePath = path.join(__dirname, 'public', relPath);
+//   try {
+//     // 检查文件是否存在
+//     await fs.promises.access(filePath, fs.constants.R_OK);
+//     // 自动设置 Content-Type
+//     const ext = path.extname(filePath);
+//     ctx.type = mime.lookup(ext) || 'application/octet-stream';
+//     ctx.body = fs.createReadStream(filePath);
+//   } catch {
+//     ctx.status = 404;
+//     ctx.body = 'Not Found';
+//   }
+// });
 
 // 使用路由中间件
 app.use(router.routes());
