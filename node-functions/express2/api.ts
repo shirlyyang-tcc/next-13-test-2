@@ -4,7 +4,7 @@ const app = express();
 
 // 添加日志中间件
 app.use((req, res, next) => {
-  console.log('request url', req.url);
+  console.log('request url2222222222', req.url);
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 
 app.get('/users/:id', (req, res) => {
   res.json({ id: req.params.id, name: 'Test User2' });
+});
+
+app.get('/context', (req, res) => {
+  console.log('context', req.context);
+  res.json({message: 'context'});
 });
 
 app.use("/static", express.static(path.join(__dirname, "public")));
