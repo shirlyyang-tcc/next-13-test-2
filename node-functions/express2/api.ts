@@ -20,7 +20,7 @@ app.get('/users/:id', (req, res) => {
 
 app.get('/context', (req, res) => {
   console.log('context', req.context);
-  res.json({message: 'context'});
+  res.json({message: 'context', context: req.context});
 });
 
 app.use("/static", express.static(path.join(__dirname, "public")));
