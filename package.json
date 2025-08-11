@@ -12,9 +12,11 @@
     "@koa/router": "^14.0.0",
     "express": "^5.1.0",
     "koa": "^3.0.1",
+    "mysql2": "^3.14.3",
     "next": "^13.5.9",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

@@ -1,3 +1,4 @@
 export const onRequest = (context) => {
-  return new Response("Test!");
+  console.log('context', context);
+  return new Response("Test!" + JSON.stringify(context.request.eo.geo));
 };
