@@ -70,7 +70,7 @@ export const onRequestGet = async (context) => {
   const { req } = context;
   
   // 在这里添加数据库查询逻辑
-  const result = await executeQuery('SELECT * FROM user LIMIT 10');
+  const result = await executeQuery('SELECT * FROM user LIMIT 100');
   
   return new Response(JSON.stringify({
     success: result.success,
