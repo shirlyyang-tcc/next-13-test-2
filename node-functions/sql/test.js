@@ -75,7 +75,8 @@ export const onRequestGet = async (context) => {
   return new Response(JSON.stringify({
     success: result.success,
     data: result.success ? result.data : null,
-    error: result.success ? null : result.error
+    error: result.success ? null : result.error,
+    thisis: 'get'
   }), {
     status: result.success ? 200 : 500,
     headers: { 'Content-Type': 'application/json' }
@@ -98,6 +99,7 @@ export const onRequestPost = async (context) => {
   console.log('insert result', result);
   return new Response(JSON.stringify({
     success: result.success,
+    thisis: 'post',
     insertId: result.success ? result.data.insertId : null,
     error: result.success ? null : result.error
   }), {
