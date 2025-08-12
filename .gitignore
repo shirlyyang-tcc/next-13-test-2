@@ -41,3 +41,5 @@ next-env.d.ts
 !.edgeone/project.json
 .tef_dist/*
   
+backup
+test-load.js
