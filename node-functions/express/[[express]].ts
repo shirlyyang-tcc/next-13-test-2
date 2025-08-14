@@ -16,7 +16,11 @@ app.get("/", (req, res) => {
 
 app.get("/users/:id/:sdasdadad", (req, res) => {
   const params = req.params.id;
-  res.json({ id: req.params.id, title: "Test Users API[express 路由匹配测试]" });
+  res.json({
+    id: req.params.id,
+    sdasdadad: req.params.sdasdadad,
+    title: "Test Users API[express 路由匹配测试]",
+  });
 });
 
 app.get("/context", (req, res) => {
