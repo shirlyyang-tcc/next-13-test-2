@@ -20,8 +20,8 @@ export default function ExpressTest() {
     },
     {
       name: 'Users with Different ID',
-      path: '/express/users/456/anotherparam',
-      description: '测试不同的ID参数'
+      path: '/express/context',
+      description: '查看 req.context 内容'
     }
   ];
 
