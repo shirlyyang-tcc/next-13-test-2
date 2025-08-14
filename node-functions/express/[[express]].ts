@@ -7,20 +7,23 @@ app.use((req, res, next) => {
   const params = req.context.params;
   params.dynamic
   params.express = "/users/1/22"
-  console.log("request [单级动态匹配测试]", req.url);
+  console.log("request [express 路由匹配测试]", req.url);
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
 
 // 添加根路由处理
 app.get("/", (req, res) => {
-  res.json({ message: "Express [单级动态匹配测试] root path" });
+  res.json({ message: "Express [express 路由匹配测试] root path" });
 });
 
 app.get("/users/:id/:sdasdadad", (req, res) => {
   const params = req.params.id;
-  res.json({ id: req.params.id, name: "Test User[单级动态匹配测试]" });
+  res.json({ id: req.params.id, title: "Test Users API[express 路由匹配测试]" });
 });
 
+app.get("/context", (req, res) => {
+  res.json({ message: "Express [express 路由匹配测试] context:" + req.context });
+})
 // 导出处理函数
 export default app;

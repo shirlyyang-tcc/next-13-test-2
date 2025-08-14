@@ -50,6 +50,11 @@ export default function Home() {
             <h2>HTTP 方法测试 &rarr;</h2>
             <p>测试 /hello/methods 的所有 HTTP 方法</p>
           </Link>
+
+          <Link href="/express-test" className={styles.card}>
+            <h2>Express 函数测试 &rarr;</h2>
+            <p>测试 Express 函数的不同路由和参数</p>
+          </Link>
         </div>
 
         <div className={styles.info}>
@@ -61,6 +66,7 @@ export default function Home() {
             <li><strong>ISR</strong>: 静态生成 + 定时更新，平衡性能和新鲜度</li>
             <li><strong>API 函数</strong>: 服务器端 API 路由，可以处理数据请求</li>
             <li><strong>HTTP 方法测试</strong>: 测试所有 HTTP 方法（GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS）</li>
+            <li><strong>Express 函数测试</strong>: 测试 Express 函数的不同路由和参数</li>
           </ul>
         </div>
       </main>
