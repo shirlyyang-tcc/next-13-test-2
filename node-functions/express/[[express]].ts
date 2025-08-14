@@ -24,7 +24,7 @@ app.get("/users/:id/:sdasdadad", (req, res) => {
 });
 
 app.get("/context", (req, res) => {
-  res.json({ message: "Express [express 路由匹配测试] context:" + req.context });
+  res.json({ message: "Express [express 路由匹配测试] context:" + JSON.stringify(req.context) });
 })
 // 导出处理函数
 export default app;
