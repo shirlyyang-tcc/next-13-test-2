@@ -23,6 +23,10 @@ app.get("/users/:id/:sdasdadad", (req, res) => {
   });
 });
 
+app.post("/post-body", (req, res) => {
+  res.json({ message: "Express [express 路由匹配测试] post-body:" + JSON.stringify(req.body) });
+});
+
 app.get("/context", (req, res) => {
   res.json({ message: "Express [express 路由匹配测试] context:" + JSON.stringify(req.context) });
 })

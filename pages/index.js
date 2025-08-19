@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Next.js 渲染模式测试
+          Next.js 渲染模式测试1
         </h1>
 
         <p className={styles.description}>
