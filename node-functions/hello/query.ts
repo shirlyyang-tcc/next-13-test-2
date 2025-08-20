@@ -11,7 +11,9 @@ export async function onRequest(context: { request: { method: string; headers: R
         ":cookies:" +
         JSON.stringify(cookies) +
         ":request:" +
-        JSON.stringify(request.url),
+        JSON.stringify(request.url) +
+        ":queryString:" +
+        JSON.stringify(request.queryString),
     }),
     {
       status: 200,
