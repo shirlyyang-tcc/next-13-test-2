@@ -3,10 +3,12 @@ import Router from '@koa/router';
 import path from 'path';
 import fs from 'fs';
 import mime from 'mime-types';
+import bodyParser from '@koa/bodyparser';
 
 // 创建 Koa 应用
 const app = new Koa();
 const router = new Router();
+app.use(bodyParser());
 
 // 添加一些中间件
 app.use(async (ctx, next) => {

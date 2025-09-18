@@ -4,7 +4,7 @@ const app = express();
 
 // 添加日志中间件
 app.use((req, res, next) => {
-  console.log("request [express 路由匹配测试，进入中间件]", req.url);
+  console.log("request [express 路由匹配测试q，进入中间件]", req.url);
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
